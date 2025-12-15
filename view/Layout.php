@@ -6,13 +6,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f6f9;
+            background: #171615;
             margin: 0;
             padding: 0;
         }
         header {
-            background: #F59C27;
-            color: white;
+            background: #242222;
+            color: #ffffff;
             padding: 15px;
             text-align: center;
             display: flex;
@@ -27,6 +27,8 @@
         
         h1 {
             margin: 0;
+            font-family: "titulo";
+            font-size: 60px;
         }
         main {
             max-width: 1000px;
@@ -46,9 +48,9 @@
         }
         footer{
             margin: auto;
-            background-color: #F59C27;
+            background-color: #313131;
             text-align: center;
-            height: 150px;
+            height: 100px;
 	    color: white;
             position: fixed;
             bottom: 0;
@@ -104,6 +106,22 @@
         .btn:active{
             background-color: green;
         }
+        
+        img{
+            background: white;
+            border-radius: 50%;
+        }
+        
+
+        @font-face {
+            font-family: 'titulo';
+            src: url('webroot/MinecraftTen-VGORe.ttf');
+        }
+        
+        p{
+            color: #64c349;
+        }
+
     </style>
 </head>
 <body>
