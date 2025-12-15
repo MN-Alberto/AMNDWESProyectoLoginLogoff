@@ -1,13 +1,14 @@
 <?php
 
-    require_once ("./config/confAPP.php");
-    require_once ("./config/confDB.php");
+    require_once ("./config/confAPP.php"); //Incluimos el fichero de configuración de la APP.
+    require_once ("./config/confDB.php"); //Incluimos el fichero de configuración de la BD.
 
-    session_start();
+    session_start(); //Iniciamos o recuperamos la sesión.
     
-    if(empty($_SESSION['paginaEnCurso'])){
-        $_SESSION['paginaEnCurso']='inicioPublico';
+    
+    if(!isset($_SESSION['paginaEnCurso'])){ //Si la página en curso no existe.
+        $_SESSION['paginaEnCurso']='inicioPublico'; //La crea y le asigna el inicio público.
     }
     
-    require_once ($controller[$_SESSION['paginaEnCurso']]);
+    require_once ($controller[$_SESSION['paginaEnCurso']]); //Añade el fichero del controlador en base a la página en curso.
 ?>

@@ -1,6 +1,3 @@
-<?php
-    require_once $view[$_SESSION["paginaEnCurso"]];
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -110,8 +107,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1><b>Inicio Público</b></h1>
-    </header>
+    <?php
+        require_once $view[$_SESSION["paginaEnCurso"]]; //Añadimos la pagina en curso para cargarla.
+    ?>
 </body>
 </html>
