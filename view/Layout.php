@@ -1,5 +1,5 @@
 <?php
-    require_once $view['inicioPublico'];
+    require_once $view[$_SESSION["paginaEnCurso"]];
 ?>
 <!DOCTYPE html>
 <html lang="es">
