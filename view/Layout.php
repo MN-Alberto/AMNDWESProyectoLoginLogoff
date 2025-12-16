@@ -25,6 +25,11 @@
             left: 70%;
         }
         
+        #f2{
+            position: relative;
+            left: 60%;
+        }
+        
         h1 {
             margin: 0;
             font-family: "titulo";
@@ -39,6 +44,25 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             height: 555px;
         }
+        
+        .mDetalle{
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #3d3938;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: auto;
+            text-align:center;
+            justify-content:center;
+            color: white;
+        }
+        
+        .mDetalle h2,h3{
+            color: #64c349;
+            text-decoration: underline;
+        }
+        
         main img{
             height: 555px;
         }
@@ -67,8 +91,10 @@
         }
         
         table{
+            margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
-            width: 100%;
+            width: 50%;
             border-width: 4px;
         }
         
@@ -125,6 +151,7 @@
             color: #64c349;
             text-decoration: underline;
         }
+        
 
     </style>
 </head>
