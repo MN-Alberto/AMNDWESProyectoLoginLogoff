@@ -34,7 +34,7 @@
             max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
-            background: white;
+            background: #3d3938;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             height: 555px;
@@ -97,10 +97,9 @@
             text-align: center;
         }
         input{
-            background-color: lightblue;
-            width: 100px;
-            height: 30px;
-            border-radius: 10px;
+            background-color: #52a535;
+            width: 140px;
+            height: 40px;
             cursor: pointer;
         }
         .btn:active{
@@ -121,6 +120,11 @@
         p{
             color: #64c349;
         }
+        
+        a{
+            color: #64c349;
+            text-decoration: underline;
+        }
 
     </style>
 </head>
@@ -128,5 +132,10 @@
     <?php
         require_once $view[$_SESSION["paginaEnCurso"]]; //Añadimos la pagina en curso para cargarla.
     ?>
+    
+    <footer>
+        <p><a href="../AMNDWESProyectoLoginLogoff/indexProyectoLoginLogoff.php">Alberto Méndez Núñez</a></p>
+        <a href="https://github.com/MN-Alberto/AMNDWESProyectoLoginLogoff" target="_blank"><img src="webroot/img.png" height="40px"/></a>
+    </footer>
 </body>
 </html>
