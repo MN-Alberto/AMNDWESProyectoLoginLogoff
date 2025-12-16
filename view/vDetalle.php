@@ -1,20 +1,16 @@
-
 <?php
     if(isset($_REQUEST['cerrar'])){
-    $_SESSION["paginaEnCurso"]=$_SESSION["paginaAnterior"];
-    header("Location: indexProyectoLoginLogoff.php");
-    exit;
+        $_SESSION["paginaEnCurso"]=$_SESSION["paginaAnterior"];
+        header("Location: indexProyectoLoginLogoff.php");
+        exit;
     }
 ?>
 
-<header>
-        <h1><b>Detalle</b></h1>
-                <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
-              <input type="submit" id="cerrar" name="cerrar" value="Cerrar"/>
-        </form> 
-    </header>
-
 <div class="mDetalle">
+    <h1><b>Detalle</b></h1>
+        <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
+      <input type="submit" id="cerrar" name="cerrar" value="Cerrar"/>
+</form> 
 <?php
     echo '<h2>Contenido de las variables globales $_SERVER, $_COOKIE, $_SESSION, $_REQUEST, $_GET, $_POST, $_FILES, $_ENV</h2>';
         

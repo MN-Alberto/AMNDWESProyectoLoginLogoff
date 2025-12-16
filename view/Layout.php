@@ -9,6 +9,7 @@
             background: #171615;
             margin: 0;
             padding: 0;
+            background: url(webroot/fondo.webp);
         }
         header {
             background: #242222;
@@ -18,11 +19,11 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            height: 100px;
         }
         
         #f1{
-            position: relative;
-            left: 70%;
+           margin-top: 40px; 
         }
         
         #f2{
@@ -42,7 +43,8 @@
             background: #3d3938;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            height: 555px;
+            height: 620px;
+            color: white;
         }
         
         .mDetalle{
@@ -132,11 +134,6 @@
             background-color: green;
         }
         
-        img{
-            background: white;
-            border-radius: 50%;
-        }
-        
 
         @font-face {
             font-family: 'titulo';
@@ -152,10 +149,19 @@
             text-decoration: underline;
         }
         
+        img{
+            background-color: inherit;
+        }
+        
 
     </style>
 </head>
 <body>
+    
+        <header>
+        <h1><b>Proyecto Login Logoff</b></h1>
+        </header>
+    
     <?php
         require_once $view[$_SESSION["paginaEnCurso"]]; //Añadimos la pagina en curso para cargarla.
     ?>
@@ -163,6 +169,7 @@
     <footer>
         <p><a href="../AMNDWESProyectoLoginLogoff/indexProyectoLoginLogoff.php">Alberto Méndez Núñez</a></p>
         <a href="https://github.com/MN-Alberto/AMNDWESProyectoLoginLogoff" target="_blank"><img src="webroot/img.png" height="40px"/></a>
+        <a href="https://www.minecraft.net/es-es" target="_blank"><img src="webroot/cubo.png" height="40px"/></a>
     </footer>
 </body>
 </html>

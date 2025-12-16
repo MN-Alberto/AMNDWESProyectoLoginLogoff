@@ -1,24 +1,20 @@
 <?php  
     if(isset($_REQUEST['Cancelar'])){
-    $_SESSION["paginaEnCurso"]="inicioPublico";
-    header("Location: indexProyectoLoginLogoff.php");
-    exit;
+        $_SESSION["paginaEnCurso"]="inicioPublico";
+        header("Location: indexProyectoLoginLogoff.php");
+        exit;
     }
     
     if(isset($_REQUEST['Entrar'])){    
-    $_SESSION["paginaAnterior"]=$_SESSION["paginaEnCurso"];
-    $_SESSION["paginaEnCurso"]="inicioPrivado";
-    header("Location: indexProyectoLoginLogoff.php");
-    exit;
+        $_SESSION["paginaAnterior"]=$_SESSION["paginaEnCurso"];
+        $_SESSION["paginaEnCurso"]="inicioPrivado";
+        header("Location: indexProyectoLoginLogoff.php");
+        exit;
     }
-    
 ?>
-    <header>
-         <h1><b>Login</b></h1>
-    </header>
 <main>   
-
-        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+<h1><b>Login</b></h1>
+        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" id="f1">
             <table>
             <tr>
                 
