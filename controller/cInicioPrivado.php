@@ -1,5 +1,10 @@
 <?php
 
+    /*
+    * Autor: Alberto Méndez 
+    * Fecha de actualización: 18/12/2025
+    */
+
     if(isset($_REQUEST['Aceptar'])){
         $_SESSION["paginaAnterior"]=$_SESSION["paginaEnCurso"];
         $_SESSION["paginaEnCurso"]="detalle";

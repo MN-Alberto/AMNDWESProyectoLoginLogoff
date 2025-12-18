@@ -1,5 +1,10 @@
 <?php
 
+    /*
+     * Autor: Alberto Méndez 
+     * Fecha de actualización: 18/12/2025
+     */
+
     class Usuario{
         
         private string $codUsuario;
@@ -11,64 +16,40 @@
         private string $perfil;
         
         
-        public function getCodUsuario(): string {
-            return $this->codUsuario;
-        }
-
-        public function getPassword(): string {
-            return $this->password;
-        }
-
-        public function getDescUsuario(): string {
-            return $this->descUsuario;
-        }
-
-        public function getNumAccesos(): int {
-            return $this->numAccesos;
-        }
-
-        public function getFechaHoraUltimaConexion(): DateTime {
-            return $this->fechaHoraUltimaConexion;
-        }
-
-        public function getFechaHoraUltimaConexionAnterior(): DateTime {
-            return $this->fechaHoraUltimaConexionAnterior;
-        }
-
-        public function getPerfil(): string {
-            return $this->perfil;
-        }
-
-
-        public function setCodUsuario(string $codUsuario): void {
+        public function __construct($codUsuario,$password,$descUsuario,$numConexiones,$fechaHoraUltimaConexion,$perfil,$imagenUsuario,$fechaHoraUltimaConexionAnterior) {
             $this->codUsuario = $codUsuario;
-        }
-
-        public function setPassword(string $password): void {
             $this->password = $password;
-        }
-
-        public function setDescUsuario(string $descUsuario): void {
             $this->descUsuario = $descUsuario;
-        }
-
-        public function setNumAccesos(int $numAccesos): void {
-            $this->numAccesos = $numAccesos;
-        }
-
-        public function setFechaHoraUltimaConexion(DateTime $fechaHoraUltimaConexion): void {
+            $this->numConexiones = $numConexiones;
             $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
-        }
-
-        public function setFechaHoraUltimaConexionAnterior(DateTime $fechaHoraUltimaConexionAnterior): void {
-            $this->fechaHoraUltimaConexionAnterior = $fechaHoraUltimaConexionAnterior;
-        }
-
-        public function setPerfil(string $perfil): void {
             $this->perfil = $perfil;
+            $this->imagenUsuario = $imagenUsuario==null?'':$imagenUsuario;
+            $this->fechaHoraUltimaConexionAnterior=$fechaHoraUltimaConexionAnterior;
         }
 
-
-        
+        public function getCodUsuario() {
+             return $this->codUsuario; 
+        }
+        public function getPassword() { 
+            return $this->password; 
+        }
+        public function getDescUsuario() { 
+            return $this->descUsuario; 
+        }
+        public function getPerfil() { 
+            return $this->perfil; 
+        }
+        public function getNumConexiones() { 
+            return $this->numConexiones; 
+        }
+        public function getFechaHoraUltimaConexion() { 
+            return $this->fechaHoraUltimaConexion; 
+        }
+        public function setFechaHoraUltimaConexion($fecha) {
+            $this->fechaHoraUltimaConexion = $fecha;
+        }
+        public function getFechaHoraUltimaConexionAnterior() { 
+            return $this->fechaHoraUltimaConexionAnterior; 
+        }
     }
 ?>

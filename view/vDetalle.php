@@ -4,6 +4,12 @@
       <input type="submit" id="cerrar" name="cerrar" value="Cerrar"/>
 </form> 
 <?php
+
+/*
+ * Autor: Alberto Méndez 
+ * Fecha de actualización: 18/12/2025
+ */
+
     echo '<h2>Contenido de las variables globales $_SERVER, $_COOKIE, $_SESSION, $_REQUEST, $_GET, $_POST, $_FILES, $_ENV</h2>';
         
                 echo '<h3>Contenido de la variable $_COOKIE</h3><br>';

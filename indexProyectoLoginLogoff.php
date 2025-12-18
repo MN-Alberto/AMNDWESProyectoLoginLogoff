@@ -1,4 +1,9 @@
 <?php
+    
+    /*
+    * Autor: Alberto Méndez 
+    * Fecha de actualización: 18/12/2025
+    */
 
     require_once ("./config/confAPP.php"); //Incluimos el fichero de configuración de la APP.
     require_once ("./config/confDB.php"); //Incluimos el fichero de configuración de la BD.

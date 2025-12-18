@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * Autor: Alberto Méndez 
+ * Fecha de actualización: 18/12/2025
+ * 
+ */
 /*
                 LOCAL
  */

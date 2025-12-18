@@ -1,3 +1,9 @@
+<?php
+    /*
+     * Autor: Alberto Méndez 
+     * Fecha de actualización: 18/12/2025
+     */
+?>
 <main>
         <h1><b>Inicio Privado</b></h1>
         

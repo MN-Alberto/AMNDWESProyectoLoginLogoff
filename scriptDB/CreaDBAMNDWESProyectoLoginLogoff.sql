@@ -4,26 +4,28 @@
  * Created: 20 nov. 2025
  */
 
-create database if not exists DBAMNDWESLoginLogoff;
-
-use DBAMNDWESLoginLogoff;
-
-create table if not exists T02_Departamento(
-    T02_CodDepartamento varchar(3) primary key,
-    T02_DescDepartamento varchar(255),
-    T02_FechaCreacionDepartamento datetime,
-    T02_VolumenNegocio float,
-    T02_FechaBajaDepartamento datetime)engine=innodb;
-
-create table if not exists T01_Usuario(
-    T01_CodUsuario VARCHAR(20) PRIMARY KEY,
-    T01_Password VARCHAR(255) NOT NULL ,
-    T01_DescUsuario VARCHAR(255),
-    T01_NumConexiones INT NOT NULL DEFAULT 0,
-    T01_FechaHoraUltimaConexion DATETIME,
-    T01_Perfil VARCHAR(25) default 'usuario',
-    T01_ImagenUsuario VARCHAR(255))engine=innodb;
-
-create user if not exists 'userAMNDWESLoginLogoff'@'%' identified by "paso";
-grant all privileges on *.* to 'userAMNDWESLoginLogoff'@'%' with grant option;
-flush privileges;
+CREATE DATABASE IF NOT EXISTS DBAMNDWESLoginLogoff;
+ 
+USE DBAMNDWESLoginLogoff;
+ 
+CREATE TABLE IF NOT EXISTS T01_Usuario(
+    T01_CodUsuario VARCHAR(10) NOT NULL PRIMARY KEY,
+    T01_Password VARCHAR(64) NOT NULL, /* 64 caracteres porque guardamos el hash */
+    T01_DescUsuario VARCHAR(255) NOT NULL,
+    T01_NumConexiones INT NOT NULL DEFAULT(0),
+    T01_FechaHoraUltimaConexion DATETIME DEFAULT(NULL),
+    T01_Perfil VARCHAR(25) DEFAULT('usuario'), /* Seria mas bien el rol del usuario */
+    T01_ImagenUsuario MEDIUMBLOB DEFAULT(NULL)
+);
+ 
+CREATE Table IF NOT EXISTS T02_Departamento(
+    T02_CodDepartamento VARCHAR(3) NOT NULL PRIMARY KEY,
+    T02_DescDepartamento VARCHAR(255) NOT NULL,
+    T02_FechaCreacionDepartamento DATETIME NOT NULL,
+    T02_VolumenDeNegocio FLOAT NOT NULL,
+    T02_FechaBajaDepartamento DATETIME
+);
+ 
+CREATE USER IF NOT EXISTS 'userAMNDWESLoginLogoff'@'%' IDENTIFIED BY 'paso';
+GRANT ALL PRIVILEGES ON DBAMNDWESLoginLogoff.* TO 'userAMNDWESLoginLogoff'@'%';
+FLUSH PRIVILEGES;

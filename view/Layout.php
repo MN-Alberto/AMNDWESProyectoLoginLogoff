@@ -181,6 +181,12 @@
         </header>
     
     <?php
+    
+    /*
+    * Autor: Alberto Méndez 
+    * Fecha de actualización: 18/12/2025
+    */
+    
         require_once $view[$_SESSION["paginaEnCurso"]]; //Añadimos la pagina en curso para cargarla.
     ?>
     
