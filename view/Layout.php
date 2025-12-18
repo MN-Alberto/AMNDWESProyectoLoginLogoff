@@ -123,13 +123,20 @@
         }
         h2{
             text-align: center;
+            font-family: "texto";
         }
         input{
             background-color: #52a535;
             width: 140px;
             height: 40px;
             cursor: pointer;
+            font-family: "texto";
         }
+        
+        label{
+            font-family: "texto";
+        }
+        
         .btn:active{
             background-color: green;
         }
@@ -140,8 +147,19 @@
             src: url('webroot/MinecraftTen-VGORe.ttf');
         }
         
+        @font-face {
+            font-family: 'texto';
+            src: url('webroot/Minecraft.ttf');
+        }
+        
+        
         p{
             color: #64c349;
+            font-family: 'texto';
+        }
+        
+        h3{
+            font-family: 'texto';
         }
         
         a{

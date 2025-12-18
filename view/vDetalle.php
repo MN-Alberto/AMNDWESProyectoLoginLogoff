@@ -1,11 +1,3 @@
-<?php
-    if(isset($_REQUEST['cerrar'])){
-        $_SESSION["paginaEnCurso"]=$_SESSION["paginaAnterior"];
-        header("Location: indexProyectoLoginLogoff.php");
-        exit;
-    }
-?>
-
 <div class="mDetalle">
     <h1><b>Detalle</b></h1>
         <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">

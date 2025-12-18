@@ -4,9 +4,9 @@
  * Created: 20 nov. 2025
  */
 
-create database if not exists DBAMNDWESProyectoLoginLogoff;
+create database if not exists DBAMNDWESLoginLogoff;
 
-use DBAMNDWESProyectoLoginLogoff;
+use DBAMNDWESLoginLogoff;
 
 create table if not exists T02_Departamento(
     T02_CodDepartamento varchar(3) primary key,
@@ -24,6 +24,6 @@ create table if not exists T01_Usuario(
     T01_Perfil VARCHAR(25) default 'usuario',
     T01_ImagenUsuario VARCHAR(255))engine=innodb;
 
-create user if not exists 'userAMNDWESProyectoLoginLogoff'@'%' identified by "paso";
-grant all privileges on *.* to 'userAMNDWESProyectoLoginLogoff'@'%' with grant option;
+create user if not exists 'userAMNDWESLoginLogoff'@'%' identified by "paso";
+grant all privileges on *.* to 'userAMNDWESLoginLogoff'@'%' with grant option;
 flush privileges;
