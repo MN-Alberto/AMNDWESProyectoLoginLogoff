@@ -12,7 +12,7 @@
         private string $descUsuario;
         private int $numAccesos;
         private DateTime $fechaHoraUltimaConexion;
-        private DateTime $fechaHoraUltimaConexionAnterior;
+        private ?DateTime $fechaHoraUltimaConexionAnterior;
         private string $perfil;
         
         

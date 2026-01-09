@@ -7,6 +7,7 @@
 
     require_once ("./config/confAPP.php"); //Incluimos el fichero de configuración de la APP.
     require_once ("./config/confDB.php"); //Incluimos el fichero de configuración de la BD.
+    require_once "./model/Usuario.php";
 
     session_start(); //Iniciamos o recuperamos la sesión.
     

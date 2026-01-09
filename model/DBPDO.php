@@ -6,7 +6,7 @@
  * 
  */
 
-    require_once "../config/confDB.php";
+    require_once "./config/confDB.php";
 
     class DBPDO {
         public static function ejecutaConsulta(string $sentenciaSQL, array $parametros = []) {

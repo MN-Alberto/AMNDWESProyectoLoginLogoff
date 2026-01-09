@@ -5,6 +5,9 @@
      * Fecha de actualización: 18/12/2025
      */
 
+    require_once "./model/UsuarioPDO.php";
+    require_once "./model/Usuario.php";
+
     if(isset($_REQUEST['Cancelar'])){
         $_SESSION["paginaEnCurso"]="inicioPublico";
         header("Location: indexProyectoLoginLogoff.php");
@@ -12,14 +15,17 @@
     }
     
     if(isset($_REQUEST['Entrar'])){    
-        $codUsuario = $_REQUEST['codUsuario']==null ? '' : $_REQUEST['codUsuario'];
-        $password = $_REQUEST['password']==null ? '' : $codUsuario.$_REQUEST['password'];
+        $codUsuario = $_REQUEST['usuario']==null ? '' : $_REQUEST['usuario'];
+        $password = $_REQUEST['pass']==null ? '' : $_REQUEST['usuario'].$_REQUEST['pass'];
         
-         $usuarioPDO = new UsuarioPDO();
-        $usuario = $usuarioPDO->validarUsuario($codUsuario, $password);
-        if ($usuario != false) {
+        // $usuarioPDO = new UsuarioPDO();
+        $usuario = UsuarioPDO::validarUsuario($codUsuario, $password);
+        
+        if ($usuario !== null) {
             $_SESSION['userAMNDWESLoginLogoff'] = $usuario;
             $_SESSION['paginaEnCurso'] = 'inicioPrivado';
+            header("Location: indexProyectoLoginLogoff.php");
+            exit;
         }
     }
 
