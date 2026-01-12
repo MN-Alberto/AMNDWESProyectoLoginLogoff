@@ -4,6 +4,12 @@
      * Fecha de actualización: 18/12/2025
      */
 ?>
+
+    
+<header>
+<h1><b>Proyecto Login Logoff</b></h1>
+</header>
+
 <main>
         <h1><b>Inicio Privado</b></h1>
         
