@@ -9,6 +9,7 @@
     require_once "./model/Usuario.php";
 
     if(isset($_REQUEST['Cancelar'])){
+        session_destroy();
         $_SESSION["paginaEnCurso"]="inicioPublico";
         header("Location: indexProyectoLoginLogoff.php");
         exit;
@@ -22,6 +23,7 @@
         $usuario = UsuarioPDO::validarUsuario($codUsuario, $password);
         
         if ($usuario !== null) {
+            UsuarioPDO::actualizarUltimaConexion($codUsuario);
             $_SESSION['userAMNDWESLoginLogoff'] = $usuario;
             $_SESSION['paginaEnCurso'] = 'inicioPrivado';
             header("Location: indexProyectoLoginLogoff.php");

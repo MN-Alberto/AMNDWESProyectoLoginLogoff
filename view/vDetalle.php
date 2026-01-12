@@ -1,14 +1,20 @@
+    
+<header>
+<h1><b>Proyecto Login Logoff</b></h1>
+</header>
 <div class="mDetalle">
     <h1><b>Detalle</b></h1>
         <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
       <input type="submit" id="cerrar" name="cerrar" value="Cerrar"/>
-</form> 
+        </form> 
 <?php
 
 /*
  * Autor: Alberto Méndez 
  * Fecha de actualización: 18/12/2025
  */
+
+
 
     echo '<h2>Contenido de las variables globales $_SERVER, $_COOKIE, $_SESSION, $_REQUEST, $_GET, $_POST, $_FILES, $_ENV</h2>';
         

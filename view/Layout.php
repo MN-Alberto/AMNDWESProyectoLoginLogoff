@@ -11,6 +11,7 @@
             padding: 0;
             background: url(webroot/fondo.webp);
         }
+        
         header {
             background: #242222;
             color: #ffffff;
@@ -20,6 +21,10 @@
             flex-direction: row;
             align-items: center;
             height: 100px;
+        }
+        
+        #h1Publico{
+            margin-right: 450px;
         }
         
         #f1{
@@ -171,14 +176,16 @@
             background-color: inherit;
         }
         
+        #arbol{
+            width: 700px;
+            height: 450px;
+            margin-top: 20px;
+        }
+        
 
     </style>
 </head>
 <body>
-    
-        <header>
-        <h1><b>Proyecto Login Logoff</b></h1>
-        </header>
     
     <?php
     
@@ -191,7 +198,7 @@
     ?>
     
     <footer>
-        <p><a href="../AMNDWESProyectoLoginLogoff/indexProyectoLoginLogoff.php">Alberto Méndez Núñez</a></p>
+        <p><a href="../AMNDWESProyectoLoginLogoff/indexProyectoLoginLogoff.php">Alberto Mendez Nuñez</a></p>
         <a href="https://github.com/MN-Alberto/AMNDWESProyectoLoginLogoff" target="_blank"><img src="webroot/img.png" height="40px"/></a>
         <a href="https://www.minecraft.net/es-es" target="_blank"><img src="webroot/cubo.png" height="40px"/></a>
     </footer>

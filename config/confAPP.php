@@ -6,7 +6,10 @@
  * 
  */
 
-    require_once 'core/libreriaValidacionFormulario.php'; //Añadimos la libreria de validación.
+    require_once './core/libreriaValidacionFormulario.php'; //Añadimos la libreria de validación.
+    require_once './model/DBPDO.php';
+    require_once './model/Usuario.php';
+    require_once './model/UsuarioPDO.php';
 
     //Array asociativo para las distintas páginas del controlador con sus respectivas rutas.
     $controller=[
