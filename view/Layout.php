@@ -181,6 +181,42 @@
             height: 450px;
             margin-top: 20px;
         }
+
+        #español{
+            background-image: url(./webroot/banderaEspaña.png);
+            background-size: cover;
+            border: none;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 25px;
+        }
+
+        #ingles{
+            background-image: url(./webroot/banderaEspaña.png);
+            background-size: cover;
+            border: none;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 25px;
+        }
+
+        #portugues{
+            background-image: url(./webroot/banderaEspaña.png);
+            background-size: cover;
+            border: none;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 25px;
+        }
+
+        #ruso{
+            background-image: url(./webroot/banderaEspaña.png);
+            background-size: cover;
+            border: none;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 25px;
+        }
         
 
     </style>

@@ -12,10 +12,10 @@
         
         <h3 style="margin-right: 40px;">Idioma: </h3>
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-            <input type="submit" name="español" id="español" class="btn" value="Español">
-            <input type="submit" name="ingles" id="ingles" class="btn" value="English">
-            <input type="submit" name="portugues" id="portugues" class="btn" value="Português">
-            <input type="submit" name="ruso" id="ruso" class="btn" value="Русский">
+            <button type="submit" name="español" id="español"></button>
+            <button type="submit" name="ingles" id="ingles"></button>
+            <button type="submit" name="portugues" id="portugues"></button>
+            <button type="submit" name="ruso" id="ruso"></button>
         </form>
         </header>
 
