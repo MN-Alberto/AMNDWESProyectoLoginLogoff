@@ -1,0 +1,24 @@
+<?php
+
+/*
+ * Autor: Alberto Méndez 
+ * Fecha de actualización: 18/12/2025
+ * 
+ */
+/*
+                LOCAL
+ */
+
+                const RUTA = 'mysql:host=daw207.local.ieslossauces.es;dbname=DBAMNDWESLoginLogoff';
+                const USUARIO = 'userAMNDWESLoginLogoff';
+                const PASS = 'paso';
+
+           /*
+            * EXPLOTACIÓN
+            */
+            /*
+              const RUTA = 'mysql:host=localhost;dbname=DBAMNDWESProyectoTema5';
+              const USUARIO = 'userAMNDWESProyectoTema5';
+              const PASS = 'CD97ertvct$E';
+ */
+?>
