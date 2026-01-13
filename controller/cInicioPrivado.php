@@ -18,5 +18,11 @@
         exit;
     }  
 
+    $avInicioPrivado=[
+        'descUsuario' => $_SESSION['userAMNDWESLoginLogoff']->getDescUsuario(),
+        'numConexiones' => $_SESSION['userAMNDWESLoginLogoff']->getNumConexiones(),
+        'fechaHoraUltimaConexionAnterior' => $_SESSION['userAMNDWESLoginLogoff']->getFechaHoraUltimaConexionAnterior()
+    ];
+
 require_once $view["Layout"];
 ?>

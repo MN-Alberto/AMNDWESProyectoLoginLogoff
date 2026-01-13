@@ -13,27 +13,25 @@
 <main>
         <h1><b>Inicio Privado</b></h1>
         
-        <h3>Bienvenido al inicio privado de la aplicacion</h3>
-        
-    <?php
-        if (isset($_SESSION['userAMNDWESLoginLogoff'])) {
+        <?php
+        echo "<h3>Bienvenido/a ". $avInicioPrivado["descUsuario"] . "</h3>";
 
-            $oUsuario = $_SESSION['userAMNDWESLoginLogoff'];
+        if ($avInicioPrivado['numConexiones'] <= 1) {
+            echo "¡Esta es tu primera conexión!<br>";
+        } else {
+          if($avInicioPrivado['fechaHoraUltimaConexionAnterior'] instanceof DateTime){
+            
+                $formatoFecha=new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+                $fecha=$formatoFecha->format($avInicioPrivado['fechaHoraUltimaConexionAnterior']);
+                $hora=$avInicioPrivado['fechaHoraUltimaConexionAnterior']->format('H:i');
 
-            if ($oUsuario->getNumConexiones() > 1) {
-    ?>
-                <p>Bienvenido <?php echo $oUsuario->getDescUsuario(); ?>.</p>
-                <p>Es la vez numero <?php echo $oUsuario->getNumConexiones(); ?> que se conecta.</p>
-    <?php
-            } else {
-    ?>
-                <p>Bienvenido <?php echo $oUsuario->getDescUsuario(); ?>.</p>
-                <p>Es la primera vez que se conecta.</p>
-    <?php
-            }
+                echo "Esta es la vez número " . $avInicioPrivado['numConexiones'] . " que se conecta.<br>";
+                echo "Usted se conectó por última vez el <br>";
+                echo $fecha . " a las " . $hora;
+          }  
         }
-    ?>
-        
+        ?>
+
         <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
             <input type="submit" id="Aceptar" name="Aceptar" value="Detalle"/>
             <input type="submit" id="cerrar" name="cerrar" value="Cerrar Sesion"/>
