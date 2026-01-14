@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background: url(webroot/fondo.webp);
+            background-repeat: no-repeat;
         }
         
         header {
@@ -181,7 +182,7 @@
             height: 450px;
             margin-top: 20px;
         }
-
+        
         #español{
             background-image: url(./webroot/banderaEspaña.png);
             background-size: cover;
@@ -192,7 +193,7 @@
         }
 
         #ingles{
-            background-image: url(./webroot/banderaEspaña.png);
+            background-image: url(./webroot/banderaIngles.jpg);
             background-size: cover;
             border: none;
             background-repeat: no-repeat;
@@ -201,7 +202,7 @@
         }
 
         #portugues{
-            background-image: url(./webroot/banderaEspaña.png);
+            background-image: url(./webroot/banderaPortugal.png);
             background-size: cover;
             border: none;
             background-repeat: no-repeat;
@@ -210,14 +211,13 @@
         }
 
         #ruso{
-            background-image: url(./webroot/banderaEspaña.png);
+            background-image: url(./webroot/banderaRusia.png);
             background-size: cover;
             border: none;
             background-repeat: no-repeat;
             width: 35px;
             height: 25px;
         }
-        
 
     </style>
 </head>

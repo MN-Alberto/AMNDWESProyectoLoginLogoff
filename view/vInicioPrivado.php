@@ -13,27 +13,44 @@
 <main>
         <h1><b>Inicio Privado</b></h1>
         
-        <?php
-        echo "<h3>Bienvenido/a ". $avInicioPrivado["descUsuario"] . "</h3>";
+<?php
+        switch ($_COOKIE['idioma']){
+            case "ES": echo "<h3>Bienvenido/a ". $avInicioPrivado["descUsuario"] . "</h3>";
+                break;
+            case "EN": echo "<h3>Welcome ". $avInicioPrivado["descUsuario"] . "</h3>";
+                break;
+            case "PT": echo "<h3>Bem-vindo ". $avInicioPrivado["descUsuario"] . "</h3>";
+                break;
+            case "RU": echo "<h3>добро пожаловать ". $avInicioPrivado["descUsuario"] . "</h3>";
+                break;
+            default : echo "<h3>Bienvenido/a ". $avInicioPrivado["descUsuario"] . "</h3>";
+                break;
+        }
 
         if ($avInicioPrivado['numConexiones'] <= 1) {
             echo "¡Esta es tu primera conexión!<br>";
         } else {
-          if($avInicioPrivado['fechaHoraUltimaConexionAnterior'] instanceof DateTime){
-            
-                $formatoFecha=new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
-                $fecha=$formatoFecha->format($avInicioPrivado['fechaHoraUltimaConexionAnterior']);
-                $hora=$avInicioPrivado['fechaHoraUltimaConexionAnterior']->format('H:i');
+          $fechaUltimaConexion = $avInicioPrivado['fechaHoraUltimaConexionAnterior'];
 
-                echo "Esta es la vez número " . $avInicioPrivado['numConexiones'] . " que se conecta.<br>";
-                echo "Usted se conectó por última vez el <br>";
-                echo $fecha . " a las " . $hora;
-          }  
+            if (!$fechaUltimaConexion instanceof DateTime) {
+                $fechaUltimaConexion = new DateTime($fechaUltimaConexion);
+            }
+            
+            $fechaUltimaConexion->setTimezone(new DateTimeZone('Europe/Madrid'));
+            
+            $formatoFecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+            $fecha = $formatoFecha->format($fechaUltimaConexion);
+            $hora = $fechaUltimaConexion->format('H:i');
+
+            echo "<p>Esta es la vez numero " . $avInicioPrivado['numConexiones'] . " que se conecta.</p>";
+            echo "<p>Usted se conecto por ultima vez el</p>";
+            echo "<p>".$fecha . " a las " . $hora."</p>";
         }
         ?>
-
+        
         <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
             <input type="submit" id="Aceptar" name="Aceptar" value="Detalle"/>
+            <input type="submit" id="mantenimiento" name="mantenimiento" value="Mantenimiento Dept"/>
             <input type="submit" id="cerrar" name="cerrar" value="Cerrar Sesion"/>
       </form> 
 </main>
