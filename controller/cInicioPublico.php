@@ -10,7 +10,7 @@
         header("Location: indexProyectoLoginLogoff.php");
         exit;
     }
-
+    
     if(empty($_COOKIE['idioma'])){
         setcookie('idioma','ES',time() + 3600);
     }

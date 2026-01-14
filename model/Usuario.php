@@ -51,5 +51,8 @@
         public function getFechaHoraUltimaConexionAnterior() { 
             return $this->fechaHoraUltimaConexionAnterior; 
         }
+        public function setFechaHoraUltimaConexionAnterior($fecha) {
+            $this->fechaHoraUltimaConexionAnterior = $fecha;
+        }
     }
 ?>

@@ -16,7 +16,8 @@
         "inicioPublico" => "controller/cInicioPublico.php",
         "login" => "controller/cLogin.php",
         "inicioPrivado" => "controller/cInicioPrivado.php",
-        "detalle" => "controller/cDetalle.php"
+        "detalle" => "controller/cDetalle.php",
+        "mantenimiento" => "controller/cMantenimiento.php"
     ];
     
     //Array asociativo para las distintas páginas de la vista con sus respectivas rutas.
@@ -25,6 +26,7 @@
         "inicioPublico" => "view/vInicioPublico.php",
         "login" => "view/vLogin.php",
         "inicioPrivado" => "view/vInicioPrivado.php",
-        "detalle" => "view/vDetalle.php"
+        "detalle" => "view/vDetalle.php",
+        "mantenimiento" => "view/vMantenimiento.php"
     ];
 ?>
