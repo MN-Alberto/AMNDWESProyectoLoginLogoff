@@ -16,6 +16,14 @@
         exit;
     }
     
+    
+    if(isset($_REQUEST['Registrarse'])){
+        $_SESSION['paginaAnterior']=$_SESSION["paginaEnCurso"];
+        $_SESSION["paginaEnCurso"]="registrarse";
+        header("Location: indexProyectoLoginLogoff.php");
+        exit;
+    }
+    
     $aErrores=[
     'codUsuario' => null,
     'password' => null

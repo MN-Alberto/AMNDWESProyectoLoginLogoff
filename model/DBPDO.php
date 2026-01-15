@@ -7,6 +7,7 @@
  */
 
     require_once "./config/confDB.php";
+    require_once 'AppError.php';
 
     class DBPDO {
         public static function ejecutaConsulta(string $sentenciaSQL, array $parametros = []) {
@@ -20,7 +21,18 @@
                 return $query->fetch();
                 
         } catch (PDOException $e){
-            return null;
+                $_SESSION['Error'] = new AppError(
+                    $e->getCode(),
+                    $e->getMessage(),
+                    $e->getFile(),
+                    $e->getLine(),
+                    $_SESSION['paginaEnCurso']
+                );
+                $_SESSION["paginaAnterior"] = $_SESSION["paginaEnCurso"];
+                $_SESSION["paginaEnCurso"] = "error";
+
+                header("Location: indexProyectoLoginLogoff.php");
+                exit;
         }
     }
  }

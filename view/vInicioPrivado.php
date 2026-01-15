@@ -50,6 +50,7 @@
         
         <form action=<?php echo $_SERVER["PHP_SELF"];?> method="post" id="f1">
             <input type="submit" id="Aceptar" name="Aceptar" value="Detalle"/>
+            <input type="submit" id="Error" name="Error" value="Error"/>
             <input type="submit" id="mantenimiento" name="mantenimiento" value="Mantenimiento Dept"/>
             <input type="submit" id="cerrar" name="cerrar" value="Cerrar Sesion"/>
       </form> 
