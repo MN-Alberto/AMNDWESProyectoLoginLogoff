@@ -5,6 +5,8 @@
     * Fecha de actualización: 18/12/2025
     */
 
+   require_once './model/DBPDO.php';
+
     if(empty($_SESSION['userAMNDWESLoginLogoff'])){
         $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
         $_SESSION['paginaEnCurso']='inicioPublico';
@@ -30,6 +32,10 @@
         $_SESSION["paginaEnCurso"]="mantenimiento";
         header("Location: indexProyectoLoginLogoff.php");
         exit;
+    } 
+    
+    if(isset($_REQUEST['Error'])){
+        DBPDO::ejecutaConsulta("select * from gfrdjgsdyuhbrejkdhvnodf;");
     } 
     
     $avInicioPrivado=[

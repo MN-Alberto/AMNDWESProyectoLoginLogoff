@@ -10,6 +10,7 @@
     require_once './model/DBPDO.php';
     require_once './model/Usuario.php';
     require_once './model/UsuarioPDO.php';
+    require_once './model/AppError.php';
 
     //Array asociativo para las distintas páginas del controlador con sus respectivas rutas.
     $controller=[
@@ -17,7 +18,9 @@
         "login" => "controller/cLogin.php",
         "inicioPrivado" => "controller/cInicioPrivado.php",
         "detalle" => "controller/cDetalle.php",
-        "mantenimiento" => "controller/cMantenimiento.php"
+        "mantenimiento" => "controller/cMantenimiento.php",
+        "registrarse" => "controller/cRegistrarse.php",
+        "error" => "controller/cError.php"
     ];
     
     //Array asociativo para las distintas páginas de la vista con sus respectivas rutas.
@@ -27,6 +30,8 @@
         "login" => "view/vLogin.php",
         "inicioPrivado" => "view/vInicioPrivado.php",
         "detalle" => "view/vDetalle.php",
-        "mantenimiento" => "view/vMantenimiento.php"
+        "mantenimiento" => "view/vMantenimiento.php",
+        "registrarse" => "view/vRegistrarse.php",
+        "error" => "view/vError.php"
     ];
 ?>
